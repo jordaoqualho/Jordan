@@ -171,13 +171,13 @@ body {
   font-size: 22px;
   color: var(--lightGray);
   margin-top: 10px;
+  margin-bottom: 50px;
 }
 
 .titulo button {
   color: var(--green);
   font-family: var(--mainFont);
   font-size: 22px;
-  margin-top: 50px;
   border: 1px solid;
   cursor: pointer;
   background-color: transparent;
