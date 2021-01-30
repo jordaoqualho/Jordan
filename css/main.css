@@ -166,12 +166,23 @@ body {
   font-weight: normal;
 }
 
+.t_about h1::after{
+  margin: -5px 0 0 0;
+}
+
 .titulo p {
   font-family: var(--litleFont);
   font-size: 22px;
   color: var(--lightGray);
   margin-top: 10px;
   margin-bottom: 50px;
+}
+
+#about_p {
+  margin-top: 40px;
+  width: 35%;
+  font-size: 18px;
+  color: white !important;
 }
 
 .titulo button {
@@ -205,4 +216,8 @@ body {
 .bottom_tag {
   left: 5%;
   bottom: 5%;
+}
+
+.titulo {
+
 }
