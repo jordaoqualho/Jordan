@@ -1,4 +1,5 @@
-/* Variaveis de estilo */
+/* ---------- Estilos Globais ---------- */
+/* ---------- Estilos Globais ---------- */
 :root {
   --green: #67f891;
   --darkGray: #363636;
@@ -9,12 +10,9 @@
   --litleFont: 'Roboto', sans-serif;
   --cursiveFont: 'La Belle Aurore', cursive;
 }
-
-/* Estilo geral */
 * {
   margin: 0;
-  padding: 0;
-  
+  padding: 0;  
   box-sizing: border-box;
   text-decoration: none;
   outline: none;
@@ -24,7 +22,6 @@
   justify-content: center;
   align-items: center;
 }
-
 body {
   display: flex;
   width: 100vw;
@@ -33,29 +30,30 @@ body {
   background-color: var(--gray);
 }
 
+/* ---------- Nav-bar Menu ---------- */
+
+/* Logo */
 .logo {
   width: 100%;
   height: 80px;
   cursor: pointer;
   flex-direction: column;
 }
-
 .logo:hover {
   background-color: var(--lightGray)27;
 }
-
 .logo h1 {
   font-size: 35px;
   font-family: var(--mainFont);
   color: var(--green);
 }
-
 .logo p {
   color: white;
   font-family: var(--mainFont);
   font-size: 12px;
 }
 
+/* Menu list */
 .menu {
   background-color: var(--darkGray);
   width: 60px;
@@ -65,20 +63,17 @@ body {
   align-items: center;
   flex-direction: column;
 }
-
 .menu_list {
   flex-direction: column;
   width: 100%;
   text-align: center;
 }
-
 .menu_list a {
   height: 40px;
   width: 100%;
   text-align: center;
   margin-bottom: 20px;
 }
-
 .icone {
   position: relative;
 }
@@ -98,25 +93,22 @@ body {
   opacity: 0;
   transition: all 0.5s ease-out;
 }
-
 .ic2 p {
   bottom: 60%;  
 }
-
 .icone:hover p {
   opacity: 1;
 }
-
 .icone:hover img {
   opacity: 0;
 }
-
 .social_media {
   flex-direction: column;
   margin-bottom: 20px;
   width: 100%;
 }
 
+/* Social media */
 .social_media a {
   width: 100%;
   text-align: center;
@@ -127,28 +119,28 @@ body {
   transition: all 0.5s ease-out;
   font-size: 16px;
 }
-
 .social_media a:hover i {
   transition: all 0.5s ease-out;
   color: var(--green);
 }
 
-.titulo {
+/* ---------- Banner   ---------- */
+
+.banner {
   font-family: var(--mainFont);
+  cursor: default;
   align-items: flex-start;
   flex-direction: column;
   color: white;  
   height: 100%;
-  padding-left: 150px;
+  padding-left: 100px;
   width: 80%;
   font-size: 30px;
 }
-
-.titulo span {
+.banner span {
   color: var(--green);
 }
-
-.titulo h1::before {
+.banner h1::before {
   content: '<h1>';
   font-family: var(--cursiveFont);
   font-size: 20px;
@@ -157,7 +149,7 @@ body {
   color: var(--tags);
   font-weight: normal;
 }
-.titulo h1::after {
+.banner h1::after {
   content: '<h1>';
   font-family: var(--cursiveFont);
   font-size: 20px;
@@ -166,27 +158,23 @@ body {
   margin: 35px 0 0 20px;
   font-weight: normal;
 }
-
 .t_about h1::after{
   margin: -5px 0 0 0;
 }
-
-.titulo p {
+.banner p {
   font-family: var(--litleFont);
   font-size: 22px;
   color: var(--lightGray);
   margin-top: 10px;
   margin-bottom: 50px;
 }
-
 #about_p {
   margin-top: 40px;
   width: 35%;
   font-size: 18px;
   color: white !important;
 }
-
-.titulo button {
+.banner button {
   color: var(--green);
   font-family: var(--mainFont);
   font-size: 22px;
@@ -195,15 +183,13 @@ body {
   background-color: transparent;
   padding: 10px 20px;
 }
-
-.titulo button:hover {
+.banner button:hover {
   background-color: var(--green);
   color: var(--darkGray);
 }
 .menu_list a:hover .menu_list a img {
   background-color: #fff;
 }
-
 .tags {
   font-family: var(--cursiveFont);
   font-size: 20px;
