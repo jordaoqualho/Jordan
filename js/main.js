@@ -1,16 +1,23 @@
+window.onload = () => {
+  const anchors = document.querySelectorAll('.icone');
+  const transition_el = document.querySelector('.transition');
 
-//função que ajusta o escroll da tag "a"
-let anchorlinks = document.querySelectorAll('a[href^="#"]')
- 
-for (let item of anchorlinks) { // relitere 
-    item.addEventListener('click', (e)=> {
-        let hashval = item.getAttribute('href')
-        let target = document.querySelector(hashval)
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        })
-        history.pushState(null, null, hashval)
-        e.preventDefault()
+  setTimeout(() => {
+    transition_el.classList.remove('is-active');
+  }, 500);
+
+  /*
+  for (let i = 0; i < anchors.length; i++) {
+    const anchor = anchors[i];
+
+    anchor.addEventListener('click', e => {
+      e.preventDefault();
+      let target = e.target.href;
+      transition_el.classList.add('is-active');
+      setInterval(() => {
+        window.location.href = target;
+      }, 400);
     })
+  }
+  */
 }
