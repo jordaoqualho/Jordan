@@ -21,6 +21,12 @@
   justify-content: center;
   align-items: center;
 }
+.flex_center_column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
 body {
   display: flex;
   width: 100vw;
@@ -262,8 +268,39 @@ body {
 }
 .contato-banner {
   width: 50%;
-  background-color: grey;
+  background-color: var(--gray);
+}
+.contato-banner h1 {
+  font-size: 48px;
+  font-family: var(--mainFont);
+  color: var(--green);
+}
+.contato-banner p {
+  font-size: 18px;
+  color: white;
+  font-family: var(--litleFont);
+  font-weight: normal;
+}
+.forms-control {
+  background-color: var(--darkGray);
+  border: none;
+  padding: 15px 10px;
+  margin: 5px;
+  width: 100%;
+}
+.forms-control::placeholder {
+  color: var(--lightGray);
+  font-size: 16px;
+}
+.forms button {
+  border: 2px solid var(--green);
+  color: var(--green);
+  padding: 10px 30px;
+  font-size: 20px;
+  font-family: var(--mainFont);
+  background-color: transparent;
 }
 .map {
   width: 50%;
+  background: url('../img/mapas.png') center center / cover no-repeat;
 }
