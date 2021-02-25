@@ -1,7 +1,7 @@
 /* ---------- Estilos Globais ---------- */
 :root {
   --green: #67f891;
-  --darkGray: #363636;
+  --darkGray: rgb(54, 54, 54);
   --gray: #3f3e3e;
   --tags: #5e5d5d;
   --lightGray: #8d8d8d;
@@ -198,12 +198,18 @@ body {
 .banner span {
   color: var(--green);
 }
+.banner h1 {
+  position: relative;
+  font-size: 7rem;
+  margin: 10px 0;
+}
 .banner h1::before {
   content: '<h1>';
   font-family: var(--cursiveFont);
   font-size: 2rem;;
   position: absolute;
-  margin-top: -30px;
+  left: -20px;
+  top: -25px;
   color: var(--tags);
   font-weight: normal;
 }
@@ -213,7 +219,8 @@ body {
   font-size: 2rem;;
   position: absolute;
   color: var(--tags);
-  margin: 35px 0 0 20px;
+  left: -20px;
+  bottom: -25px;
   font-weight: normal;
 }
 .t_about h1::after{
@@ -225,6 +232,30 @@ body {
   color: var(--lightGray);
   margin-top: 10px;
   margin-bottom: 50px;
+}
+.banner button {
+  position: relative;
+  overflow: visible;
+}
+.banner button::before {
+  content: '<button>';
+  font-family: var(--cursiveFont);
+  font-size: 2rem;;
+  position: absolute;
+  color: var(--tags);
+  bottom: 45px;
+  left: -20px;
+  font-weight: normal;
+}
+.banner button::after {
+  content: '<button>';
+  font-family: var(--cursiveFont);
+  font-size: 2rem;;
+  position: absolute;
+  color: var(--tags);
+  top: 50px;
+  left: -20px;
+  font-weight: normal;
 }
 #about_p {
   margin-top: 40px;
@@ -356,6 +387,7 @@ body {
 }
 .forms-control {
   background-color: var(--darkGray);
+  transition: .5s ease all;
   border: none;
   resize: none;
   padding: 15px 20px;
@@ -365,18 +397,12 @@ body {
   margin: 5px;
   width: 100%;
   position: relative;
+  border-bottom: 1px solid transparent;
 }
-.forms-control::after{
-  content: '';
-  position: absolute;
-  height: 1px;
-  bottom: 0;
-  left: 0;
-  background-color:var(--green);
-  width: 100px;
-  
+.forms-control:hover, .forms-control:focus {
+  border-bottom: 1px solid var(--green);
 }
-.forms-control::placeholder {
+.forms-control::placeolder {
   color: var(--lightGray);
   font-size: 1.6rem;
 }
@@ -396,13 +422,13 @@ body {
 .stand-btn::after {
   content: '';
   background-color: var(--green);
-  transition: .5s ease;
+  transition: .5s ease all;
   position: absolute;
   z-index: -1;
-  left: -1px;
+  left: -5%;
   top: -1px;
   height: calc(100% + 2px);
-  border-bottom-right-radius: 100px;
+  transform: skewX(-10deg);
   width: 0%;
 }
 .stand-btn:hover::after {
@@ -415,6 +441,24 @@ body {
   width: 50%;
   position: relative;
   background: url('../img/mapas.png') center center / cover no-repeat;
+}
+.anotation {
+  background-color: rgba(54, 54, 54, 0.9);;
+  width: fit-content;
+  border-radius: 5px;
+  padding: 20px;
+  margin: 35px;
+}
+.anotation p {
+  margin: 5px 0;
+  color: white;
+  font-family: var(--litleFont);
+}
+.anotation p:nth-child(3) {
+  margin-top: 20px;
+}
+.anotation span {
+  color: var(--green);
 }
 .marker {
   height: 9%;
