@@ -27,12 +27,16 @@
   justify-content: center;
   flex-direction: column;
 }
+html {
+  font-size: 62.5%;
+}
 body {
   display: flex;
   width: 100vw;
   height: 100vh;
   overflow-x: hidden;
   background-color: var(--gray);
+  font-size: 1.6rem;
 }
 
 .transition-1 {
@@ -172,7 +176,7 @@ body {
   color: var(--lightGray);
   margin-top: 15px;
   transition: all 0.5s ease-out;
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 .social_media a:hover i {
   transition: all 0.5s ease-out;
@@ -197,7 +201,7 @@ body {
 .banner h1::before {
   content: '<h1>';
   font-family: var(--cursiveFont);
-  font-size: 20px;
+  font-size: 2rem;;
   position: absolute;
   margin-top: -30px;
   color: var(--tags);
@@ -206,7 +210,7 @@ body {
 .banner h1::after {
   content: '<h1>';
   font-family: var(--cursiveFont);
-  font-size: 20px;
+  font-size: 2rem;;
   position: absolute;
   color: var(--tags);
   margin: 35px 0 0 20px;
@@ -217,7 +221,7 @@ body {
 }
 .banner p {
   font-family: var(--litleFont);
-  font-size: 22px;
+  font-size: 2.2rem;;
   color: var(--lightGray);
   margin-top: 10px;
   margin-bottom: 50px;
@@ -225,28 +229,15 @@ body {
 #about_p {
   margin-top: 40px;
   width: 35%;
-  font-size: 18px;
+  font-size: 1.8rem;
   color: white !important;
-}
-.banner button {
-  color: var(--green);
-  font-family: var(--mainFont);
-  font-size: 22px;
-  border: 1px solid;
-  cursor: pointer;
-  background-color: transparent;
-  padding: 10px 20px;
-}
-.banner button:hover {
-  background-color: var(--green);
-  color: var(--darkGray);
 }
 .menu_list a:hover .menu_list a img {
   background-color: #fff;
 }
 .tags {
   font-family: var(--cursiveFont);
-  font-size: 20px;
+  font-size: 2rem;
   position: absolute;
   color: var(--tags);
 }
@@ -262,6 +253,7 @@ body {
 /* ---------- Page Contato  ---------- */
 .contato {
   width: 100%;
+  overflow: hidden;
   display: flex;
   background-color: #fff;
   height: 100%;
@@ -269,38 +261,164 @@ body {
 .contato-banner {
   width: 50%;
   background-color: var(--gray);
+  z-index: 2;
 }
 .contato-banner h1 {
-  font-size: 48px;
+  font-size: 4.8rem;
+  width: 80%;
   font-family: var(--mainFont);
   color: var(--green);
+  margin: 30px 0;
+  position: relative;
+}
+.contato-banner h1::before {
+  content: '</h1>';
+  font-family: var(--cursiveFont);
+  position: absolute;
+  font-size: 2rem;
+  bottom: 45px;
+  color: var(--tags);
+  font-weight: normal;
+  left: -20px;
+}
+.contato-banner h1::after {
+  content: '</h1>';
+  left: -20px;
+  bottom: -25px;
+  font-family: var(--cursiveFont);
+  position: absolute;
+  font-size: 2rem;;
+  color: var(--tags);
+  font-weight: normal;
 }
 .contato-banner p {
-  font-size: 18px;
+  font-size: 1.6rem;
   color: white;
+  position: relative;
+  width: 80%;
   font-family: var(--litleFont);
   font-weight: normal;
+  margin: 30px 0;
+}
+.contato-banner p::before {
+  content: '</p>';
+  font-family: var(--cursiveFont);
+  position: absolute;
+  font-size: 2rem;
+  bottom: 55px;
+  left: -20px;
+  color: var(--tags);
+  font-weight: normal;
+}
+.contato-banner p::after {
+  content: '</p>';
+  left: -20px;
+  bottom: -35px;
+  font-family: var(--cursiveFont);
+  position: absolute;
+  font-size: 2rem;;
+  color: var(--tags);
+  font-weight: normal;
+}
+.forms {
+  width: 80%;
+  position: relative;
+  margin: 40px 0;
+}
+.forms::before {
+  content: '</form>';
+  font-family: var(--cursiveFont);
+  position: absolute;
+  font-size: 2rem;;
+  top: -30px;
+  left: -20px;
+  color: var(--tags);
+  font-weight: normal;
+}
+.forms::after {
+  content: '</form>';
+  left: -20px;
+  bottom: -50px;
+  font-family: var(--cursiveFont);
+  position: absolute;
+  font-size: 2rem;;
+  color: var(--tags);
+  font-weight: normal;
+}
+.row {
+  width: 100%;
+  display: flex;
+  gap: 10px;
+}
+.row .forms-control {
+  width: 50%;
+  margin: 5px 0;
 }
 .forms-control {
   background-color: var(--darkGray);
   border: none;
-  padding: 15px 10px;
+  resize: none;
+  padding: 15px 20px;
+  color: var(--lightGray);
+  font-family: var(--litleFont);
+  font-size: 1.6rem;
   margin: 5px;
   width: 100%;
+  position: relative;
+}
+.forms-control::after{
+  content: '';
+  position: absolute;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color:var(--green);
+  width: 100px;
+  
 }
 .forms-control::placeholder {
   color: var(--lightGray);
-  font-size: 16px;
+  font-size: 1.6rem;
 }
-.forms button {
-  border: 2px solid var(--green);
+.stand-btn {
+  border: 1px solid var(--green);
+  overflow: hidden;
+  cursor: pointer;
   color: var(--green);
   padding: 10px 30px;
-  font-size: 20px;
+  align-self: flex-end;
+  margin-top: 20px;
+  font-size: 2rem;;
   font-family: var(--mainFont);
   background-color: transparent;
+  position: relative;
+}
+.stand-btn::after {
+  content: '';
+  background-color: var(--green);
+  transition: .5s ease;
+  position: absolute;
+  z-index: -1;
+  left: -1px;
+  top: -1px;
+  height: calc(100% + 2px);
+  border-bottom-right-radius: 100px;
+  width: 0%;
+}
+.stand-btn:hover::after {
+  width: 140%;
+}
+.stand-btn:hover {
+  color: var(--gray);
 }
 .map {
   width: 50%;
+  position: relative;
   background: url('../img/mapas.png') center center / cover no-repeat;
+}
+.marker {
+  height: 9%;
+  position: absolute;
+  left: 43%;
+  top: 35%;
 }

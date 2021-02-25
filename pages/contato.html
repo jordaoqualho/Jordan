@@ -23,7 +23,7 @@
       src="https://kit.fontawesome.com/68009b18a3.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="icon" type="image/png" href="/img/new.ico">
+    <link rel="icon" type="image/png" href="/img/favicon-32x32.png">
   </head>
   <body>
     <div class="transition transition-2 is-active"></div>
@@ -62,7 +62,7 @@
       </div>
     </section>
     <section class="contato">
-        <div class="contato-banner">
+        <div class="contato-banner flex_center_column">
             <h1>
                 Entre em contato!
             </h1>
@@ -73,17 +73,20 @@
                 fique a vontade para enviar um email.
             </p>
             <form class="forms flex_center_column">
-                <input type="text" class="forms-control" placeholder="Nome">
-                <input type="text" class="forms-control" placeholder="Email">
+                <div class="row">
+                    <input type="text" autocomplete="name" class="forms-control" placeholder="Nome">
+                    <input type="text" autocomplete="email" class="forms-control" placeholder="Email">
+                </div>                
                 <input type="text" class="forms-control" placeholder="Assunto">
-                <input type="text" class="forms-control" placeholder="Mensagem">
-                <button class="contato-btn">Enviar</button>
+                <textarea class="forms-control" name="Mensagem" id="" cols="30" rows="5">Mensagem</textarea>
+                <button class="stand-btn">Enviar</button>
             </form>
         </div>
+        
         <div class="map">
+            <img src="../img/marker.svg" class="marker" alt="I'm here!">
         </div>
-    </section>
-    
+    </section>    
     <script src="/js/main.js"></script>
   </body>
 </html>
