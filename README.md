@@ -2,10 +2,12 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">  
-    <img src="https://user-images.githubusercontent.com/50970557/109575630-fb219380-7ad0-11eb-87ef-d8fcd277013c.png" alt="Logo" >
+    <img src="https://user-images.githubusercontent.com/50970557/109575630-fb219380-7ad0-11eb-87ef-d8fcd277013c.png">
 </p>
 
-# PortFolio
+# Meu Portfolio
+<img src="https://user-images.githubusercontent.com/50970557/109576038-ca8e2980-7ad1-11eb-96bf-1c2f00950af4.png">
+
 
 *Site em desenvolvimento:*
 <a href="https://jordaoqualho.vercel.app/">
