@@ -39,24 +39,6 @@ body {
   font-size: 1.6rem;
 }
 
-.transition-1 {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 101;
-  background-color: var(--darkGray);
-  opacity: 0;
-  pointer-events: none;
-  transition: 0.5s ease-out;
-}
-
-.transition-1.is-active {
-  pointer-events: all;
-  opacity: 1;
-}
-
 .transition-2 {
   position: fixed;
   top: 0;
