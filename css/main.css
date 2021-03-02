@@ -37,8 +37,12 @@ body {
   overflow: hidden;
   background-color: var(--gray);
   font-size: 1.6rem;
+  -youbkit-touch-callout: none;
+  -youbkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
-
 .transition-2 {
   position: fixed;
   top: 0;
@@ -49,11 +53,9 @@ body {
   background-color: var(--darkGray);
   transition: 0.5s ease-out;
 }
-
 .transition-2.is-active {
   left: 0px;
 }
-
 .transition-3 {
   position: fixed;
   top: 100%;
@@ -64,7 +66,6 @@ body {
   background-color: var(--darkGray);
   transition: 0.5s ease-out;
 }
-
 .transition-3.is-active {
   top: 0;
 }
@@ -186,13 +187,13 @@ body {
 }
 .banner h1 {
   position: relative;
-  font-size: 7rem;
+  font-size: 6.5rem;
   margin: 10px 0;
 }
 .banner h1::before {
   content: "<h1>";
   font-family: var(--cursiveFont);
-  font-size: 2rem;
+  font-size: 1.8rem;
   position: absolute;
   left: -20px;
   top: -25px;
@@ -202,7 +203,7 @@ body {
 .banner h1::after {
   content: "<h1>";
   font-family: var(--cursiveFont);
-  font-size: 2rem;
+  font-size: 1.8rem;
   position: absolute;
   color: var(--tags);
   left: -20px;
@@ -230,17 +231,20 @@ body {
 }
 .tags {
   font-family: var(--cursiveFont);
-  font-size: 2rem;
+  font-size: 1.8rem;
+  z-index: 3;
   position: absolute;
   color: var(--tags);
 }
 .top_tag {
-  top: 5%;
-  left: 4%;
+  top: 2rem;
+  bottom: auto;
+  left: 9rem;
 }
 .bottom_tag {
-  left: 5%;
-  bottom: 5%;
+  top: auto;
+  bottom: 2rem;
+  left: 9rem;
 }
 .big-jay {
   width: 50%;
@@ -272,9 +276,56 @@ body {
   bottom: -25px;
 }
 
+/* ---------- About page  ---------- */
+.about-container {
+  position: relative;
+}
+.about-container h1 {
+  margin: 3rem 0;
+}
+.about-container p {
+  font-size: 1.6rem;
+  color: white;
+  position: relative;
+  width: 80%;
+  font-family: var(--litleFont);
+  margin: 1rem 0;
+  font-weight: normal;
+}
+.about-container :nth-child(2)::before {
+  content: "<p>";
+  font-family: var(--cursiveFont);
+  position: absolute;
+  margin-top: 5px;
+  font-size: 1.8rem;
+  color: var(--tags);
+  font-weight: normal;
+  margin-top: -3rem;
+  left: -2rem;
+}
+.about-container :nth-child(4)::after {
+  content: "</p>";
+  left: -2rem;
+  bottom: -7rem;
+  font-family: var(--cursiveFont);
+  position: absolute;
+  font-size: 1.8rem;
+  color: var(--tags);
+  font-weight: normal;
+}
+.about-container a {
+  color: var(--green);
+  margin-top: 1rem;
+  font-size: 1.6rem;
+  font-family: var(--litleFont);
+}
+.about-container a:hover {
+  color: #4aaf67;
+}
 /* ---------- Page Contato  ---------- */
 .contato {
   width: 100%;
+  position: relative;
   overflow: hidden;
   display: flex;
   background-color: #fff;
@@ -286,19 +337,19 @@ body {
   z-index: 2;
 }
 .contato-banner h1 {
-  font-size: 4.8rem;
+  font-size: 6.5rem;
   width: 80%;
   font-family: var(--mainFont);
   color: var(--green);
-  margin: 30px 0;
+  margin: 15px 0;
   position: relative;
 }
 .contato-banner h1::before {
-  content: "</h1>";
+  content: "<h1>";
   font-family: var(--cursiveFont);
   position: absolute;
-  font-size: 2rem;
-  bottom: 45px;
+  font-size: 1.8rem;
+  bottom: 6rem;
   color: var(--tags);
   font-weight: normal;
   left: -20px;
@@ -306,10 +357,10 @@ body {
 .contato-banner h1::after {
   content: "</h1>";
   left: -20px;
-  bottom: -25px;
+  top: 6rem;
   font-family: var(--cursiveFont);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--tags);
   font-weight: normal;
 }
@@ -319,39 +370,42 @@ body {
   position: relative;
   width: 80%;
   font-family: var(--litleFont);
+  margin: 1.6rem 0;
   font-weight: normal;
-  margin: 30px 0;
 }
 .contato-banner p::before {
-  content: "</p>";
+  content: "<p>";
   font-family: var(--cursiveFont);
   position: absolute;
-  font-size: 2rem;
-  bottom: 55px;
-  left: -20px;
+  margin-top: 5px;
+  font-size: 1.8rem;
   color: var(--tags);
   font-weight: normal;
+  margin-top: -3rem;
+  left: -2rem;
 }
 .contato-banner p::after {
   content: "</p>";
-  left: -20px;
-  bottom: -35px;
+  left: -2rem;
+  bottom: -3rem;
   font-family: var(--cursiveFont);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--tags);
   font-weight: normal;
 }
+
+/* Forms Style */
 .forms {
   width: 80%;
   position: relative;
-  margin: 40px 0;
+  margin: 60px 0;
 }
 .forms::before {
   content: "</form>";
   font-family: var(--cursiveFont);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   top: -30px;
   left: -20px;
   color: var(--tags);
@@ -363,7 +417,7 @@ body {
   bottom: -50px;
   font-family: var(--cursiveFont);
   position: absolute;
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: var(--tags);
   font-weight: normal;
 }
@@ -429,6 +483,8 @@ body {
 .stand-btn:hover {
   color: var(--gray);
 }
+
+/* Map Style */
 .map {
   width: 50%;
   position: relative;
